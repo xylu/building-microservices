@@ -9,3 +9,26 @@ _Take your first steps with Spring Boot._
 - link:livelessons-bootstrap-maven[Understanding Auto-configuration]
 
 TODO Jetty docs ac
+
+
+== Notes:
+
+****
+. Read: http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application[Tutorial], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#getting-started-first-application[First app], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#executable-jar[Loader], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#using-boot-devtools[Developer Tools] 
+. Play with: https://start.spring.io[start.io + Web Dependency]
+.. maven-wrapper (mvnw)
+.. gradle wrapper (gradlew)
+. Running spring-boot app
+.. from IDE (make sure *.starter has compile scope, _check_ `livelessons-bootstrap-autoconfiguration`)
+.. mvn spring-boot:run
+.. spring run example.groovy
+.. gradlew bootRun
+.. gradlew run
+.. java -jar target/myproject-0.0.1-SNAPSHOT.jar
+.. java -jar target/myproject-0.0.1-SNAPSHOT.jar --debug
+.. java -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=8000,suspend=n \
+       -jar target/myproject-0.0.1-SNAPSHOT.jar
+. Play with Spring Boot DevTools (https://github.com/xylu/stuff/blob/master/sandbox/spring-boot/demo[demo], https://www.youtube.com/watch?v=A70NMxV13TI[video])
+****
+
+
