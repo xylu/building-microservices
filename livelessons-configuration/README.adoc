@@ -4,6 +4,5 @@
 _The 12 factor manifesto, external configuration and how these concepts are
 supported in Spring._
 
-- link:livelesson-configuration-basic[Basic]
-- link:livelesson-configuration-cloudclient[Cloud Client]
-- link:livelesson-configuration-cloudserver[Cloud Server]
+. Read  (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config[Externalized Configuration], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-profiles[Profiles])
+. Play with ( https://github.com/xylu/stuff/blob/master/sandbox/spring-boot/demo/src/main/java/com/example/DemoApplication.java[Demo] )
