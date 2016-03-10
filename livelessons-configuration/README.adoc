@@ -4,5 +4,9 @@
 _The 12 factor manifesto, external configuration and how these concepts are
 supported in Spring._
 
-. Read  (http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config[Externalized Configuration], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-profiles[Profiles])
+. Read  ( http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-external-config[Externalized Configuration], http://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-profiles[Profiles])
 . Play with ( https://github.com/xylu/stuff/blob/master/sandbox/spring-boot/demo/src/main/java/com/example/DemoApplication.java[Demo] )
+. Read about ( http://cloud.spring.io/spring-cloud-config/[Spring Cloud Config] )
+. Run cloud config server
+. Check out ( http://localhost:8888/admin/health[Admin Health], http://localhost:8888/health[Health], http://localhost:8888/config-client.properties[App config])
+. Run cloud config client

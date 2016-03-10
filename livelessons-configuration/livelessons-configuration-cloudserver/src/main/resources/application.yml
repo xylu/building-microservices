@@ -6,4 +6,5 @@ spring:
     config:
       server:
         git :
-          uri: https://github.com/joshlong/microservices-lab-configuration
+          uri: https://github.com/xylu/building-microservices
+          searchPaths: cloud-config
