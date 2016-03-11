@@ -23,8 +23,9 @@
 			<plugin>
 				<groupId>com.heroku.sdk</groupId>
 				<artifactId>heroku-maven-plugin</artifactId>
-				<version>0.3.4-SNAPSHOT</version>
+				<version>1.0.0</version>
 				<configuration>
+					<appName>livelessons-example</appName>
 					<includeTarget>false</includeTarget>
 					<includes>
 						<include>${project.build.directory}/${project.artifactId}-${project.version}.jar</include>
