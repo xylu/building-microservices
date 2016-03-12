@@ -5,4 +5,8 @@ _Why the web is a existence proof of the HTTP architecture and how to build
 services that exploit that._
 
 - link:livelessons-rest-basic[Basic]
-- link:livelessons-rest-sync[Sync]
+- link:livelessons-rest-errors[Errors]
+
+== Notes
+. Basic -> usage of JPA and REST repositories, HATEOAS support, application/hal+json
+. Errors -> usage of ControllerAdvice, support of application/vnd.error
