@@ -3,3 +3,10 @@
 
 _Connect Microservices using Spring Integration and Spring Batch._
 
+== Notes ==
+. link:livelessons-integration-basic-messaging[Basic messaging] -> RabbitMQ in use, simple Producer-Consumer
+. link:livelessons-integration-batch[Batch] -> simple batch job execution (csv -> Object -> RDBMS)
+. link:livelessons-integration-eai[Echo Server] -> echo server exposed twice (independently)
+.. echo service as a RabbitMQ message consumer (tested on startup)
+.. echo service as a WebSocket message consumer (test: Open a few http://localhost:8080/[Web Socket message consumer] and then http://localhost:8080/echo?name=hello%20world%202[Web Socket message producer])
+
