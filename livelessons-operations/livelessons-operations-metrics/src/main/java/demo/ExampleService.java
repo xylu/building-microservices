@@ -23,8 +23,10 @@ public class ExampleService {
 	}
 
 	public void call() {
-		this.counterService.increment("example.counter");
-		this.gaugeService.submit("example.gauge", random.nextDouble());
+//		it does not work  :/ (tested successfully with 1.3.3.RELEASE though)
+		this.counterService.increment("example.alamakota2");
+
+		this.gaugeService.submit("example.alamakota", random.nextDouble());
 	}
 
 }
