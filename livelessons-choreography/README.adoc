@@ -11,3 +11,24 @@ This section demonstrates:
 - how to use Ribbon client-side load-balancing to dispatch calls in various ways  using `DiscoveryClient`, using a blessed `RestTemplate` instance, and using the Feign & Spring MVC integration. Start everything up and then run `PassportServiceApplication` to see this working.
 - how  to use Hystrix and the  Hystrix dashboard to manage problematic service-to-service calls. You can see this in action by now disabling the `PhotoServiceApplication` (if you're in IntelliJ, remember to click the 'Exit' button which is the fifth one down from the top left - an arrow pointing to a door, under the camera icon and _not_ the 'Stop' or 'Pause' ones) and then re-running the `PassportServiceApplication`.
 - How to use Zuul to expose and aggregate backend microservices via an edge gateway. 
+
+== Notes ==
+. Test Eureka
+.. run eureka-service to start up Eureka server
+.. run bookmark-service to register bookmark service
+.. run contact-service to register contact service
+.. run gateway to start up client that uses Eureka to communicate with bookmar & contact services
+.. open http://localhost:8761/ to view Eureka server and registered services
+.. open http://localhost:9023/pwebb/passport to test the flow
+
+. Test Hystrix
+.. stop gateway
+.. run hystrix
+.. run hystrix-dashboard (open http://localhost:9903/ and connect to app started in previous step: http://localhost:9023/hystrix.stream)
+.. open http://localhost:9023/pwebb/passport  (check hystrix dashboard)
+.. kill bookmark-service and open http://localhost:9023/pwebb/passport (check hystrix dashboard and notice that fallback (empty list) kicks in)
+.. start up bookmark-service and test again
+
+. Test Ribbon (load balancer)
+.. stop hystrix & hystrinx-dashboard
+.. start ribbon-and-eureka
