@@ -23,6 +23,7 @@ post-fixed with a SHA of its content.
 To test the application open a browser to http://localhost:8080 and enable networking
 tools. Notice how URLs inside the page are rewritten (e.g. `/css/page.css` and all its
 `@imports`). If you hit return in the browser URL bar you'll notice that only a single
-request is needed to re-render the page. If you turn set `application.devmode` to `true`
+request is needed to re-render the page (actually one resource "/" is fetched and other resources are reloaded from local cache).
+If you turn set `application.devmode` to `true`
 and repeat the experiment you'll notice that multiple request are made when the page
 is refreshed.
