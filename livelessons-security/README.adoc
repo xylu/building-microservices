@@ -7,3 +7,39 @@ _How to apply security to your microservices._
 - link:livelessons-security-sso-auth-server[Single Sign On (Server)]
 - link:livelessons-security-sso-resource[Single Sign On (Resource)]
 - link:livelessons-security-https[HTTPS (TSL/SSL)]
+
+
+== NOTES ==
+
+To test SSO
+
+. Run SsoAuthServerApplication
+. Generate token
+----
+ curl -X POST -vu acme:acmesecret http://localhost:9999/uaa/oauth/token -H "Accept: application/json" -d "password=spring&username=jlong&grant_type=password&scope=openid&client_secret=acmesecret&client_id=acme"
+----
+
+. Run SsoResourceApplication
+
+. Use access token (step 3) to get resource
+----
+ curl http://localhost:9000/hi -H "Authorization: Bearer _INSERT ACCESS TOKEN_"
+----
+
+TO test SSL
+
+. Run BasicHttpsSecurityApplication
+
+. Open resource (provide client certificate)
+
+----
+wget -q -O - --no-check-certificate --certificate=rod.pem  https://localhost:8080/hi
+curl -k --cert rod.pem:password https://localhost:8080/hi
+----
+
+Note: curl must support password-protected cert+keystore (i.e. curl built with OpenSSL)
+
+Check out:
+
+- http://www.slideshare.net/SpringCentral/securing-microservices-with-spring-cloud-security-53170178[OAuth, OpenID, Spring Cloud Presentation]
+- https://github.com/william-tran/microservice-security[microservice-security example]
